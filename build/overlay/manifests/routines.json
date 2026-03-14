@@ -1,0 +1,64 @@
+{
+  "priorityArbitration": {
+    "triggers": [
+      "what should i work on now",
+      "what's next",
+      "prioritize"
+    ],
+    "inputs": [
+      "active project tasks.md first",
+      "global tasks.md always",
+      "other projects only when requested"
+    ],
+    "scoring": {
+      "formula": "U + I + D - E",
+      "dependencyBoost": 2,
+      "blockedPenalty": -3
+    },
+    "outputTemplate": [
+      "Pick now: <task> -- <why>",
+      "Next: <task>, <task>",
+      "If you have 15 mins: <micro-task>"
+    ]
+  },
+  "focusLock": {
+    "activateOn": [
+      "task selected",
+      "user says lets work on X"
+    ],
+    "lockedBehavior": [
+      "keep suggestions aligned to focused task",
+      "ask pause or switch focus when request is unrelated"
+    ],
+    "unlockOn": [
+      "pause",
+      "switch task",
+      "change focus",
+      "reprioritize",
+      "switch project",
+      "task completed",
+      "task blocked"
+    ]
+  },
+  "morning": {
+    "run": "priority arbitration",
+    "outputFields": [
+      "Pick now:",
+      "Next:",
+      "If you have 15 mins:",
+      "Focus suggestion: <1>"
+    ],
+    "followUp": "lock focus on this?"
+  },
+  "eod": {
+    "outputFields": [
+      "Touched today:",
+      "Completed:",
+      "In progress:",
+      "Blockers:",
+      "Journal (1 line):"
+    ],
+    "followUp": "what should i mark done and what carries over?",
+    "writebackPolicy": "do not modify tasks.md until user confirms"
+  }
+}

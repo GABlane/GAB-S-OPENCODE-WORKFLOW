@@ -1,0 +1,38 @@
+{
+  "registry": {
+    "manager-default": "claude-sonnet-4-6",
+    "claude-premium": "claude-opus-4-6",
+    "planner-default": "claude-sonnet-3-5v2",
+    "gemini-default": "gemini-1.5-flash",
+    "gemini-large": "gemini-1.5-pro",
+    "codex-small": "gpt-5.1-codex-mini",
+    "codex-medium": "gpt-5.2-codex",
+    "codex-large": "gpt-5.3-codex",
+    "build-default": "gpt-5.3-codex"
+  },
+  "policy": {
+    "managerRole": "triage, plan, delegate, synthesize",
+    "codingRole": "build agent handles coding, cli, testing, debugging",
+    "escalation": [
+      "start at cheapest suitable tier",
+      "step up on uncertainty or failed validation",
+      "escalate on risk triggers"
+    ]
+  },
+  "riskOverrides": {
+    "codexMinimum": "codex-medium",
+    "codexPreferred": "codex-large",
+    "geminiPreferred": "gemini-large"
+  },
+  "validTierKeys": [
+    "manager-default",
+    "claude-premium",
+    "planner-default",
+    "gemini-default",
+    "gemini-large",
+    "codex-small",
+    "codex-medium",
+    "codex-large",
+    "build-default"
+  ]
+}

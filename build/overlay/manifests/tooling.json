@@ -1,0 +1,32 @@
+{
+  "toolSelection": {
+    "read": "read files and directories",
+    "glob": "find files by pattern",
+    "grep": "search content by regex",
+    "apply_patch": "edit files and add new files",
+    "bash": "terminal operations",
+    "task": "run specialized subagents",
+    "question": "ask user for a required decision",
+    "webfetch": "fetch web content"
+  },
+  "workflowRules": {
+    "preferSpecializedTools": true,
+    "useWorkdirInsteadOfCd": true,
+    "quotePathsWithSpaces": true,
+    "nonInteractiveGitOnly": true
+  },
+  "gitSafety": {
+    "commitOnlyOnExplicitRequest": true,
+    "neverForcePushMain": true,
+    "avoidAmendUnlessExplicit": true,
+    "neverCommitSecrets": true
+  },
+  "skillfulExtension": {
+    "additionalTools": [
+      "skill_find",
+      "skill_use",
+      "skill_resource"
+    ],
+    "providedBy": "opencode-skillful plugin"
+  }
+}

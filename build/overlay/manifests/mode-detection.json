@@ -1,0 +1,37 @@
+{
+  "sizeThresholds": {
+    "small": "1 file or <50 LOC",
+    "medium": "2-4 files or 50-300 LOC",
+    "large": "5+ files or >300 LOC"
+  },
+  "modes": {
+    "L1": {
+      "when": "single file, <20 LOC, or pure question",
+      "behavior": "direct answer, no plan"
+    },
+    "L2": {
+      "when": "2-3 files or 20-150 LOC, single concern",
+      "behavior": "short 3-5 step plan plus go-checkpoint"
+    },
+    "L3": {
+      "when": "4+ files, >150 LOC, cross-concern or architecture",
+      "behavior": "structured plan with checkpoints"
+    }
+  },
+  "riskFloor": "L2",
+  "riskTriggers": [
+    "auth",
+    "payments",
+    "database schema/migrations",
+    "env/config",
+    "security",
+    "PII"
+  ],
+  "sessionHeader": {
+    "enabledInModes": [
+      "L2",
+      "L3"
+    ],
+    "template": "Active project: <name> | Mode: L# | Last action: <short> | Focus: <optional>"
+  }
+}

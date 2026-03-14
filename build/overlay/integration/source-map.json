@@ -1,0 +1,53 @@
+{
+  "workflowDocs": {
+    "overview": "01-OVERVIEW.md",
+    "modeDetection": "02-MODE-DETECTION.md",
+    "modelRegistry": "03-MODEL-REGISTRY.md",
+    "agents": "04-AGENTS.md",
+    "skills": "05-SKILLS.md",
+    "routines": "06-ROUTINES.md",
+    "tools": "07-TOOLS.md",
+    "overrides": "08-OVERRIDES.md",
+    "quickReference": "09-QUICK-REFERENCE.md"
+  },
+  "eccHydrated": {
+    "root": "everything-claude-code",
+    "counts": {
+      "agents": 14,
+      "skills": 58,
+      "commands": 35,
+      "rules": 30
+    },
+    "paths": {
+      "agents": "everything-claude-code/agents",
+      "skills": "everything-claude-code/skills",
+      "commands": "everything-claude-code/commands",
+      "rules": "everything-claude-code/rules",
+      "hooks": "everything-claude-code/hooks"
+    }
+  },
+  "skillfulHydrated": {
+    "root": "opencode-skillful",
+    "counts": {
+      "tools": 3,
+      "services": 9
+    },
+    "paths": {
+      "pluginEntry": "opencode-skillful/src/index.ts",
+      "skillFinder": "opencode-skillful/src/tools/SkillFinder.ts",
+      "skillUser": "opencode-skillful/src/tools/SkillUser.ts",
+      "skillResourceReader": "opencode-skillful/src/tools/SkillResourceReader.ts",
+      "registry": "opencode-skillful/src/services/SkillRegistry.ts"
+    }
+  },
+  "overlayArtifacts": {
+    "compiledWorkflow": "build/overlay/OPENCODE-WORKFLOW.md",
+    "modeManifest": "build/overlay/manifests/mode-detection.json",
+    "modelManifest": "build/overlay/manifests/model-registry.json",
+    "agentManifest": "build/overlay/manifests/agents.json",
+    "skillManifest": "build/overlay/manifests/skills.json",
+    "routineManifest": "build/overlay/manifests/routines.json",
+    "overrideManifest": "build/overlay/manifests/overrides.json",
+    "toolManifest": "build/overlay/manifests/tooling.json"
+  }
+}

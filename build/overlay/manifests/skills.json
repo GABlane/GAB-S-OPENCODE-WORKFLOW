@@ -1,0 +1,17 @@
+{
+  "workflowCatalog": {
+    "sourceFile": "05-SKILLS.md",
+    "listedSkills": 59
+  },
+  "hydratedCatalog": {
+    "sourceRoot": "everything-claude-code/skills",
+    "detectedSkills": 58,
+    "format": "one SKILL.md per skill directory"
+  },
+  "loadingPolicy": {
+    "runtime": "lazy",
+    "discoveryTool": "skill_find",
+    "injectionTool": "skill_use",
+    "resourceTool": "skill_resource"
+  }
+}

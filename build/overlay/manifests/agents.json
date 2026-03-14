@@ -1,0 +1,50 @@
+{
+  "taskAgents": [
+    "general",
+    "explore",
+    "build-small",
+    "build-large",
+    "planner",
+    "architect",
+    "code-reviewer",
+    "security-reviewer",
+    "tdd-guide",
+    "build-error-resolver",
+    "e2e-runner",
+    "doc-updater",
+    "refactor-cleaner",
+    "go-reviewer",
+    "go-build-resolver",
+    "database-reviewer"
+  ],
+  "recommendedRouting": {
+    "multi-step research": "general",
+    "codebase exploration": "explore",
+    "small change": "build-small",
+    "large or risky change": "build-large",
+    "planning": "planner",
+    "architecture": "architect",
+    "review": "code-reviewer",
+    "security review": "security-reviewer",
+    "build/type fixes": "build-error-resolver",
+    "e2e flow": "e2e-runner"
+  },
+  "eccBackedAgents": {
+    "planner": "everything-claude-code/agents/planner.md",
+    "architect": "everything-claude-code/agents/architect.md",
+    "tdd-guide": "everything-claude-code/agents/tdd-guide.md",
+    "code-reviewer": "everything-claude-code/agents/code-reviewer.md",
+    "security-reviewer": "everything-claude-code/agents/security-reviewer.md",
+    "build-error-resolver": "everything-claude-code/agents/build-error-resolver.md",
+    "e2e-runner": "everything-claude-code/agents/e2e-runner.md",
+    "doc-updater": "everything-claude-code/agents/doc-updater.md",
+    "refactor-cleaner": "everything-claude-code/agents/refactor-cleaner.md",
+    "go-reviewer": "everything-claude-code/agents/go-reviewer.md",
+    "go-build-resolver": "everything-claude-code/agents/go-build-resolver.md",
+    "database-reviewer": "everything-claude-code/agents/database-reviewer.md"
+  },
+  "notes": [
+    "general/explore/build-small/build-large are runtime-level task agents, not ECC markdown agents",
+    "ECC also includes extra agents not required by this workflow, such as python-reviewer and chief-of-staff"
+  ]
+}

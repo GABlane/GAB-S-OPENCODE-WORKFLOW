@@ -1,0 +1,22 @@
+{
+  "modeOverride": {
+    "commands": [
+      "!L1",
+      "!L2",
+      "!L3"
+    ],
+    "effect": "force mode for current request only"
+  },
+  "modelOverride": {
+    "force": "!ForceModel <tier>",
+    "lock": "!LockModel <tier>",
+    "clear": "!ClearModel",
+    "validationSource": "model-registry validTierKeys"
+  },
+  "examples": [
+    "!L2 add pagination to the API",
+    "!ForceModel codex-large refactor the worker",
+    "!LockModel gemini-large",
+    "!ClearModel"
+  ]
+}

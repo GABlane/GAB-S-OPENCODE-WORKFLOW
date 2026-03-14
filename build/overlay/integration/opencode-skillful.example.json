@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "@zenobius/opencode-skillful"
+  ],
+  "skillful": {
+    "promptRenderer": "xml",
+    "modelRenderers": {
+      "claude-3-5-sonnet": "xml",
+      "gpt-4": "json",
+      "gpt-4-turbo": "json"
+    },
+    "basePaths": [
+      "~/.config/opencode/skills",
+      ".opencode/skills"
+    ]
+  }
+}

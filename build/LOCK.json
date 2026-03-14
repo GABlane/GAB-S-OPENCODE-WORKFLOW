@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "bundle": "gab-opencode-workflow",
+  "generatedDate": "2026-03-15",
+  "sources": {
+    "workflow": {
+      "type": "local",
+      "path": "/Users/gearworxdev/GAB-S-OPENCODE-WORKFLOW",
+      "docs": [
+        "01-OVERVIEW.md",
+        "02-MODE-DETECTION.md",
+        "03-MODEL-REGISTRY.md",
+        "04-AGENTS.md",
+        "05-SKILLS.md",
+        "06-ROUTINES.md",
+        "07-TOOLS.md",
+        "08-OVERRIDES.md",
+        "09-QUICK-REFERENCE.md"
+      ]
+    },
+    "everything-claude-code": {
+      "repo": "https://github.com/affaan-m/everything-claude-code.git",
+      "pinnedCommit": "32e9c293f0d6f04e3b9bf804887747d5c8b5dc10",
+      "hydratedPath": "everything-claude-code"
+    },
+    "opencode-skillful": {
+      "repo": "https://github.com/zenobi-us/opencode-skillful.git",
+      "pinnedCommit": "9ee443f5d61f1783cdbf6e01acb3a587b3c3b4f8",
+      "hydratedPath": "opencode-skillful"
+    }
+  },
+  "artifactPaths": {
+    "workflowOverlay": "build/overlay/OPENCODE-WORKFLOW.md",
+    "manifests": "build/overlay/manifests",
+    "integration": "build/overlay/integration",
+    "verification": "build/verification/REPORT.md"
+  }
+}
