@@ -21,10 +21,17 @@ Agent list (Task tool subagents)
 | go-build-resolver | Go build, vet, and compilation error resolution specialist. | Fixes Go build errors with minimal diffs. |
 | database-reviewer | PostgreSQL database specialist. | Query optimization, schema design, security, performance, Supabase best practices. |
 
+Codex bridge (primary execution path)
+- build-small and build-large no longer execute inline.
+- Instead, write a structured TASK file to ~/ai-bridge/inbox/ and wait for Codex result in ~/ai-bridge/outbox/.
+- Use the agent catalog below for planning, review, and analysis only.
+- See 10-CODEX-BRIDGE.md for task file format.
+
 When to use Task tool
 - When a task matches an agent description.
 - When executing a custom slash command.
 - When you need an autonomous multi-step effort.
+- Not for coding/build tasks — those go to Codex via the bridge.
 
 When NOT to use Task tool
 - If you want to read a specific file path (use Read).

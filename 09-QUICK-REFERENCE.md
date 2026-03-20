@@ -58,6 +58,17 @@ Overrides
 | !LockModel <tier> | Lock model until cleared |
 | !ClearModel | Clear model lock |
 
+Codex bridge
+
+| Path | Purpose |
+| --- | --- |
+| ~/ai-bridge/inbox/ | Claude Code drops TASK-{id}.md here |
+| ~/ai-bridge/outbox/ | Codex drops TASK-{id}.result.md here |
+| ~/ai-bridge/archive/ | Completed pairs moved here after synthesis |
+| ~/ai-bridge/status.json | Queue state |
+
+Rule: Claude plans, Codex builds. Never code inline. "do it yourself" override for L1 only.
+
 Routine triggers
 
 | Trigger | Action |

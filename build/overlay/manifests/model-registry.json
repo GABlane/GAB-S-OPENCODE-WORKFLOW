@@ -2,7 +2,7 @@
   "registry": {
     "manager-default": "claude-sonnet-4-6",
     "claude-premium": "claude-opus-4-6",
-    "planner-default": "claude-sonnet-3-5v2",
+    "planner-default": "claude-sonnet-4-5",
     "gemini-default": "gemini-1.5-flash",
     "gemini-large": "gemini-1.5-pro",
     "codex-small": "gpt-5.1-codex-mini",
@@ -13,6 +13,7 @@
   "policy": {
     "managerRole": "triage, plan, delegate, synthesize",
     "codingRole": "build agent handles coding, cli, testing, debugging",
+    "buildDefaultTier": "high",
     "escalation": [
       "start at cheapest suitable tier",
       "step up on uncertainty or failed validation",

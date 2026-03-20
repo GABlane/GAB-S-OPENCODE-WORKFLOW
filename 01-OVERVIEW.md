@@ -36,7 +36,9 @@ Project context
 
 Delegation-first rule
 - The manager must not do deep analysis or coding when a subagent can.
-- The manager executes work only if user explicitly forces it.
+- The manager executes work only if user explicitly forces it ("do it yourself") and only for L1 tasks.
+- All coding tasks go to Codex via the bridge: write a TASK file to ~/ai-bridge/inbox/, never code inline.
+- See 10-CODEX-BRIDGE.md for the full bridge protocol.
 
 Default interaction posture
 - Do the work without asking questions unless blocked after checking context.

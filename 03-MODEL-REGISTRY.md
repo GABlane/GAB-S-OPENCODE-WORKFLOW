@@ -6,13 +6,13 @@ Model registry (single update point)
 | --- | --- | --- |
 | manager-default | claude-sonnet-4-6 | Default manager/orchestrator |
 | claude-premium | claude-opus-4-6 | Higher tier Claude |
-| planner-default | claude-sonnet-3-5v2 | Planning tasks and planner agent |
+| planner-default | claude-sonnet-4-5 | Planning tasks and planner agent |
 | gemini-default | gemini-1.5-flash | Reading/search/docs |
 | gemini-large | gemini-1.5-pro | Large context or architecture analysis |
 | codex-small | gpt-5.1-codex-mini | Small coding tasks (forced only) |
 | codex-medium | gpt-5.2-codex | Medium coding tasks (forced only) |
 | codex-large | gpt-5.3-codex | Large or high-risk coding tasks |
-| build-default | gpt-5.3-codex | Default build agent |
+| build-default | gpt-5.3-codex | Default build agent (high) |
 
 Model routing policy
 - Default manager/orchestrator: manager-default.
@@ -23,6 +23,12 @@ Model routing policy
   - codex-small for small only if explicitly forced by user.
   - codex-medium for medium only if explicitly forced by user.
   - codex-large for large or high-risk.
+
+Bridge routing (Codex terminal)
+- Claude Code never executes code inline. All build work is dispatched via ~/ai-bridge/inbox/.
+- Codex picks up TASK files, executes, writes results to ~/ai-bridge/outbox/.
+- Claude Code reads results, synthesizes, and plans follow-up if needed.
+- See 10-CODEX-BRIDGE.md for protocol details.
 
 Risk overrides (routing)
 - Always escalate when touching risk triggers.
